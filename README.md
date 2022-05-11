@@ -6,4 +6,4 @@
 
 ## Project 3: Stock Price Prediction using time series forcasting
 
-## Project 4: Visualization of CNN Filters
+## Project 4: Visualization of Convolution Neural Network Filters
