@@ -4,7 +4,7 @@ Evaluate the performance of the model against real data using Google Finance in 
 
 Analyzing, visualizing and forecasting the price of any stock.
 
-To run the code in colab:
+To run the code in colab
 
 	-->Download the .ipynb file and TSLA.csv file for dataset.
 	-->Switch to GPU mode for faster Computation (Runtime--> Change runtime--> GPU).
