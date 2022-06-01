@@ -9,3 +9,7 @@
 ## Project 4: Visualization of Convolution Neural Network Filters
 
 ## Project 5: Image Super Resolution using Convolution Neural Network
+
+## Project 6: Blog-it Website using MERN stack
+
+## Project 7: E-Blood Bank website using HTML, CSS, Django
