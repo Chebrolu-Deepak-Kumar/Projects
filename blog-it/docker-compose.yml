@@ -1,0 +1,66 @@
+# version: "3"
+# services:
+#   react-app:
+#     image: client
+#     stdin_open: true
+#     ports: 
+#       - "3000:3000"
+#     networks:
+#       - mern-app
+#   api-server:
+#     image: server
+#     ports:
+#       - "5000:5000"
+#     networks:
+#       - mern-app
+
+  
+# networks:
+#   mern-app:
+#     driver: bridge
+
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    image: server
+    container_name: server
+    command: npm run start
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redisdb
+    networks:
+      - app-network
+
+  client:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: client
+    container_name: client
+    command: npm run start
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+
+  redisdb:
+    image: 'redis:alpine'
+    restart: always
+    hostname: redisdb
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis_data:/data
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge

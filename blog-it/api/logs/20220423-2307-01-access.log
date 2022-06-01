@@ -1,0 +1,4 @@
+::1 - - [23/Apr/2022:17:15:53 +0000] "GET /api/posts/mypost HTTP/1.1" 401 12 "-" "PostmanRuntime/7.29.0"
+::1 - - [23/Apr/2022:17:16:01 +0000] "POST /api/auth/login HTTP/1.1" 200 315 "-" "PostmanRuntime/7.29.0"
+::1 - - [23/Apr/2022:17:16:10 +0000] "GET /api/posts/mypost HTTP/1.1" 200 2 "-" "PostmanRuntime/7.29.0"
+::1 - - [23/Apr/2022:17:17:46 +0000] "GET /api/posts/mypost HTTP/1.1" 200 11957 "-" "PostmanRuntime/7.29.0"

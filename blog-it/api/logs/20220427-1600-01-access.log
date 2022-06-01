@@ -1,0 +1,4 @@
+::1 - - [27/Apr/2022:09:42:43 +0000] "GET /api/posts/ HTTP/1.1" 200 24346 "-" "insomnia/2021.7.2"
+::ffff:127.0.0.1 - - [27/Apr/2022:10:23:36 +0000] "GET / HTTP/1.1" 404 139 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:10:27:49 +0000] "GET /posts HTTP/1.1" 404 144 "-" "node-superagent/3.8.3"
+::1 - - [27/Apr/2022:10:29:30 +0000] "GET /api/posts/ HTTP/1.1" 200 24346 "-" "PostmanRuntime/7.29.0"

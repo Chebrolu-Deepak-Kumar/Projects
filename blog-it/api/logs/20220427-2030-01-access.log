@@ -1,0 +1,6 @@
+::ffff:127.0.0.1 - - [27/Apr/2022:14:32:33 +0000] "GET /api/events HTTP/1.1" 200 1577 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:14:32:34 +0000] "GET /api/users HTTP/1.1" 200 2262 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:14:38:52 +0000] "GET /api/events HTTP/1.1" 200 1577 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:14:38:53 +0000] "GET /api/users HTTP/1.1" 200 2262 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:14:57:02 +0000] "GET /api/events HTTP/1.1" 200 1577 "-" "node-superagent/3.8.3"
+::ffff:127.0.0.1 - - [27/Apr/2022:14:57:02 +0000] "GET /api/users HTTP/1.1" 200 2262 "-" "node-superagent/3.8.3"

@@ -1,0 +1,8 @@
+::1 - - [22/Apr/2022:19:33:19 +0000] "GET /api/auth/mypost HTTP/1.1" 403 9 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:33:29 +0000] "POST /api/auth/login HTTP/1.1" 200 312 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:33:39 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1595 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:35:11 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1597 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:35:54 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1597 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:41:20 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1598 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:41:48 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1598 "-" "PostmanRuntime/7.29.0"
+::1 - - [22/Apr/2022:19:42:25 +0000] "GET /api/auth/mypost HTTP/1.1" 500 1598 "-" "PostmanRuntime/7.29.0"
