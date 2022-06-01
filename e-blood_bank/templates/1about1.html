@@ -1,0 +1,243 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>e-Blood Bank</title>
+	{% comment %} linking stylestheet.css and bootstrap.css {% endcomment %}
+	<link rel="icon" href="{% static 'images/img.jfif' %}" type="image/x-icon">
+	<link rel="stylesheet" href="{% static 'css/1bootstrap1.css' %}">
+	<link rel="stylesheet" href="{% static 'css/1stylesheet1.css' %}">
+	<link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	{% comment %} This is the starting of the header for the main page {% endcomment %}
+	<header>
+		<nav id="header-nav" class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+				{% comment %} This code is for the logo of the page {% endcomment %}
+					<a href="{% url 'index' %}" class="pull-left visible-md visible-lg">
+						<img id="logo" src="{% static 'images\img.jfif' %}" alt="Logo">
+					</a>
+					{% comment %} This is our project title {% endcomment %}
+					<div class="navbar-brand">
+						<a href="{% url 'index' %}">
+							<h1>e-Blood Bank</h1>
+						</a>
+						{% comment %} This is caption {% endcomment %}
+						<p>Bring a Life Back to Power!!</p>
+					</div>
+					{% comment %} This code serves as the menu toggle button in small screens {% endcomment %}
+					<button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#collapsable-nav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				{% comment %} These are the links to other pages and in small screen devices you will get the above mentioned menu button which has these links {% endcomment %}
+				<div id="collapsable-nav" class="collapse navbar-collapse">
+					<ul id="nav-list" class="nav navbar-nav navbar-right">
+					{% comment %} each <li> is an individual link to other pages {% endcomment %}
+						<li id="navHomeButton" class="visible-xs active">
+							<a href="{% url 'index' %}" id="Home_Black_background_List">Home</a>
+						</li>
+						{% comment %} If the user is logged in then he will get his profile details or else it will redirected to the login page {% endcomment %}
+						{% if user.is_authenticated %}
+						<li id="navMenuButton">
+							<a href="{% url 'dashboard'%}">
+								<br class="hidden-xs">DashBoard</a>
+						</li>
+						{%else%}
+						<li id="navMenuButton">
+							<a href="{%url 'login'%}">
+								<br class="hidden-xs">DashBoard</a>
+						</li>
+						{%endif%}
+						<li>
+							<a href="{% url 'blood_bank' %}">
+								<br class="hidden-xs"> Blood Bank</a>
+						</li>
+						<li>
+							<a href="{% url 'camps' %}">
+								<br class="hidden-xs"> Camps</a>
+						</li>
+						{% comment %} If the user is logged in he gets an option to logout or else he gets an option to login {% endcomment %}
+						{% if user.is_authenticated %}
+						<li>
+							<a href="{% url 'logout'%}">
+								<br class="hidden-xs"> Logout</a>
+						</li>
+						{%else%}
+						<li>
+							<a href="{% url 'login' %}">
+								<br class="hidden-xs"> Login</a>
+						</li>
+						{%endif%}
+						<li>
+							<a href="{% url 'about' %}">
+								<br class="hidden-xs">Network</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	{% comment %} This is the ending of the header for the main page {% endcomment %}
+
+{% comment %} These are our contacts of our hospitals {% endcomment %}
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital1.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Star Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">DilshukNagar,Hyderabad</p>
+			</div>
+
+			<div class="col-md-2"></div>
+
+			<hr class="visible-xs">
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital2.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Apollo Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">Mehdipatnam,Hyderabad</p>
+			</div>
+
+			<hr class="visible-xs">
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital3.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Narayana Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">Lakdikapul,Hyderabad</p>
+			</div>
+
+			<div class="col-md-2"></div>
+
+			<hr class="visible-xs">
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital4.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Yashoda Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">ECIL,Hyderabad</p>
+			</div>
+
+			<hr class="visible-xs">
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital5.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Prime Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">Charminar,Hyderabad</p>
+			</div>
+
+			<div class="col-md-2"></div>
+
+			<hr>
+
+			<div class="hospital col-md-5 col-xs-12 container">
+				<img src="{% static 'images/hospital6.jfif' %}" class="hospital-images">
+				<p id="hospital-name">Medi Care Hospitals</p>
+				{% comment %} This will redirected to the phone call {% endcomment %}
+				<a href="tel:9848345499" id="call-btn" class="btn">
+					<span>Conact Them Here</span>
+				</a>
+				<p id="adress">Kukatpally,Hyderabad</p>
+			</div>
+
+		</div>
+	</div>
+
+	{% comment %} footer starts here {% endcomment %}
+	<footer class="panel-footer">
+
+		<div class="container">
+			<div class="row">
+
+				<div class="container" id="footer">
+					{% comment %} Here we have used col-sm-4 class from bootstrap to make the screen into 3 equal parts for small screen devices {% endcomment %}
+					{% comment %} This section has all the links for other pages {% endcomment %}
+					<section id="pages" class="col-sm-4">
+						<div>
+							<a href="{% url 'blood_bank' %}">Blood Bank</a>
+						</div>
+						<div>
+							<a href="{% url 'camps' %}">Camps</a>
+						</div>
+						<div>
+							<a href="{% url 'login' %}">Login</a>
+						</div>
+						<div>
+							<a href="{% url 'about' %}">Network</a>
+						</div>
+					</section>
+
+					{% comment %} We have used class visible-xs from bootstrap so that the horizontal line is only visible in extra small screen devices {% endcomment %}
+					<hr class="visible-xs">
+					
+					{% comment %} Using this section the user can contact us {% endcomment %}
+					<section id="contact-us" class="col-sm-4">
+						<p>Conatct Us:</p>
+						<a href="mailto:ebloodbank@gmail.com">
+							<p>Send a email</p>
+						</a>
+
+					</section>
+
+					{% comment %} We have used class visible-xs from bootstrap so that the horizontal line is only visible in extra small screen devices {% endcomment %}
+					<hr class="visible-xs">
+
+					{% comment %} This section has all the links to our social media pages {% endcomment %}
+					<section class="col-sm-4">
+
+						<ul class="social-icons">
+							<li><a href="https://www.facebook.com"><img src="{% static 'images\Facebook.png' %}" /></a>
+							</li>
+							<li><a href="https://www.twitter.com"><img src="{% static 'images\Twitter.png' %}" /></a>
+							</li>
+							<li><a href="https://www.youtube.com"><img src="{% static 'images\Youtube.png' %}" /></a>
+							</li>
+
+						</ul>
+				</div>
+			</div>
+
+			</ul>
+
+			</section>
+
+
+		</div>
+	</footer>
+	{% comment %} Linked 1bootstrap.min.js and our own javascript 1script1.js {% endcomment %}
+	<script src="{% static 'js/1jquery-2.1.4.min.js' %}"></script>
+	<script src="{% static 'js/1bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/1script1.js' %}"></script>
+</body>
+
+</html>
